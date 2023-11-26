@@ -1,0 +1,72 @@
+.f{
+    background-color: rgb(235, 112, 108);
+   color:rgb(255, 255, 255) ;
+   height: auto;
+   padding: 5%;
+   width: 90%;
+   font-family: 'Zen Maru Gothic', sans-serif;
+    
+}
+ 
+.itirann1
+{
+    background-color:rgb(255, 255, 255) ;
+    color: rgb(235, 112, 108);
+    width: 100%;
+    margin-bottom: 5vw;
+    border-radius: 5%;
+    animation-name:fadeInAnime;
+    animation-duration:3s;
+    animation-fill-mode:forwards;
+    opacity:0;
+}
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.itirann2
+{
+ font-size: 1.5vh;
+
+}
+
+.gurumes-container{
+  display: flex;
+  width: 100%;
+  flex-wrap:wrap;
+}
+
+.itirann3{
+  flex-direction: column;
+  padding: 5%;
+  width:23%;
+}
+
+html{
+  width: 100%;
+}
+
+.search input[type="text"] {
+ width: 50%;
+ height: 3vw;
+ 
+}
+
+.itirann5{
+padding-top: 5%;
+padding-left: 5%;
+font-size: 3vh;
+}
+
+.gurume{
+  font-size: 2.5vh;
+}

@@ -1,0 +1,33 @@
+<div class="show1">
+ <div class="show2">
+    <div class="gurume">
+      店名：<%= @gurume.name %>
+      <p><%= image_tag @gurume.image_url, size: "250x200" if @gurume.image? %></p>
+      系統：<%= @gurume.food_genre %><br>
+      最寄り駅：<%= @gurume. station%><br>
+      ジャンル：<%= @gurume.genre %><br>
+      コメント：<%= @gurume.about %><br>
+
+      
+
+      
+    </div>
+
+    <div>
+    <h2>総合評価：
+    <span class="star-rating">
+      <span class="star-rating-front" style="width: <%= getPercent(@gurume.star) %>%;">★★★★★</span>
+      <span class="star-rating-back">★★★★★</span>
+    </span> 
+    </h2>
+    </div>
+
+    <%= link_to "一覧に戻る", gurumes_itiran_path %>
+
+    <%= link_to "編集する", edit_gurume_path(@gurume.id) %>
+
+    <% @gurume.tags.each do |tag| %>
+      <span><%= tag.name %></span>
+    <% end %>
+   </div>  
+</div>

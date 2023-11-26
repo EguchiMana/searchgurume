@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+    <title class=a>SearchGURUME</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash&family=Sacramento&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+   
+  <header>
+  
+  <h1><%= link_to "searchGURUME", gurumes_top_path %></h1>
+  
+  <%= link_to "",gurumes_path ,class:"kennsaku"%>
+  <%= link_to "",new_gurume_path ,class:"shinnki" %>
+ 
+  <%= link_to "",gurumes_itiran_path ,class:"itirann" %>
+  <div class="header-list">
+   <ul>
+    <% if user_signed_in? %>
+     <li><%= link_to '', destroy_user_session_path, method: :delete ,class:"logouticon" %></li>
+    <% else %>
+    
+     <li><%= link_to "", new_user_session_path ,class:"loginicon"%></li>
+    <% end %>
+   </ul>
+  </div>
+ </header>
+ <main>
+ <%= yield %>
+</main>
+  </body>
+</html>

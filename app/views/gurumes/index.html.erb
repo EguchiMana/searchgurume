@@ -1,0 +1,61 @@
+<div class="b">
+<div class="c">
+店名から検索
+</div>
+<div class="j">
+<%= form_tag({controller:"gurumes",action:"itirann"}, method: :get) do %>
+  <%= text_field_tag :search, "", {class: "search"} %>
+  <button name="button" type="submit" class="search-icon">
+  <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+ </button>
+ </div>  
+<% end %>
+
+  </div>
+  <div class="c">
+  ジャンルから検索<br>
+  </div>
+  <div class="d">
+  <div class="i">
+  <%= link_to gurumes_insta_path do %>
+<%= image_tag "insta.jpg", class:"insta1" %><% end %>
+  <br>
+  インスタ映え
+  </div>
+
+  <div class="i">
+  <%= link_to gurumes_girl_path do %>
+    <%= image_tag "girls.jpg", class:"girls1" %><% end %>
+  <br>
+  女子会
+  </div>
+  
+  <div class="i">
+  <%= link_to gurumes_family_path do %>
+    <%= image_tag "family.jpg", class:"family1" %><% end %>
+  <br>
+ 家族連れ
+  </div>
+
+  <div class="i">
+  <%= link_to gurumes_ryouzyuushi_path do %>
+    <%= image_tag "oomori.jpg", class:"oomori1"  %><% end %>
+  <br>
+  量重視
+  </div>
+
+  <div class="i">
+  <%= link_to gurumes_date_path do %>
+    <%= image_tag "date.jpg", class:"date1"  %><% end %>
+  <br>
+  デート
+  </div>
+
+  <div class="i">
+  <%= link_to gurumes_other_path do %>
+    <%= image_tag "other.jpg", class:"other1"  %><% end %>
+  <br>
+  その他
+  </div>
+  </div>
+

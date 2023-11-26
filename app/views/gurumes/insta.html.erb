@@ -1,0 +1,41 @@
+<div class="f">
+<div class="itirann1">
+<div class="itirann5">
+<h3>インスタ映え</h3>
+</div>
+
+
+
+<div class="gurumes-container">
+<% @instas.each do |t| %>
+
+  <div class="itirann3">       
+
+
+              <div class="gurume">
+               <p><%= t.name %><br></p>
+               <p><%= image_tag t.image_url, size: "250x200" if t.image? %></p>              
+              </div>
+
+              <div class="itirann2">
+                <h2>総合評価：
+                  <span class="star-rating">
+                    <span class="star-rating-front" style="width: <%= getPercent(t.star) %>%;">★★★★★</span>
+                    <span class="star-rating-back">★★★★★</span>
+                  </span> 
+                </h2>
+              </div>
+            
+              <div class="itirann4">
+              <%= link_to "詳細へ", gurume_path(t.id) %>
+              <% if user_signed_in? && current_user.id == t.user_id %>
+                <%= link_to "編集する", edit_gurume_path(t.id) %>
+                <%= button_to "削除する", gurume_path(t.id), method: :delete %> 
+              <% end %>
+              </div>
+  </div>
+
+<% end %>
+</div>
+
+</div>

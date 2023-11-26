@@ -1,0 +1,54 @@
+.g
+{
+padding-top: 5%;
+padding-left: 20%;
+padding-right: 20%;
+padding-bottom: 15%;
+background-color: rgb(235, 112, 108) ;
+color: rgb(255, 255, 255);
+}
+ 
+.h
+{animation-name:fadeInAnime;
+    animation-duration:3s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    border-radius: 5%;
+    background-color: rgb(255, 255, 255) ;
+    color: rgb(235, 112, 108);
+    padding-top: 10%;
+    padding-left: 30%;
+    padding-bottom: 10%
+    
+}
+
+@keyframes fadeUpAnime{
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.shinnki1
+{
+    padding: 2%;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    
+}
+
+  
+.field
+{
+    padding: 1%;
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+.hyouka1
+{
+    padding: 1%;
+    font-family: 'Zen Maru Gothic', sans-serif;
+}

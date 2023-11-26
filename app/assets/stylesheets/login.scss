@@ -1,0 +1,32 @@
+.login1{
+    padding: 20vh 10vw;
+    text-align: center;
+    background-color: rgb(235, 112, 108)
+    
+}
+
+.login2{
+    font-family: 'Zen Maru Gothic', sans-serif;
+    animation-name:fadeInAnime;
+    animation-duration:3s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    color: rgb(235, 112, 108);
+    padding: 50px;
+    border-radius:5%;
+    margin-right: 25%;
+    margin-left: 25%;
+    background-color: rgb(255, 255, 255)
+   
+}
+@keyframes fadeUpAnime{
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
