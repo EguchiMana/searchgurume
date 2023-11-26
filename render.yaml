@@ -1,0 +1,22 @@
+databases:
+  - name: searchgurume_DB
+    databaseName: searchgurume_db
+    user: searchgurume
+    region: singapore
+
+services:
+  - type: web
+    name: searchgurume
+    env: ruby
+    region: singapore
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: searchgurume_DB
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+
